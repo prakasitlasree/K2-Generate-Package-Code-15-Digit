@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32A934DA-79D2-4F53-B39A-8E06AA99CD6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>K2_Generate_Package_Code_15_Digit</RootNamespace>
+    <AssemblyName>K2 Generate Package Code 15 Digit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1stScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1stScreen.Designer.cs">
+      <DependentUpon>1stScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Container\DefaultContainer.cs" />
+    <Compile Include="DAL\15DigitPkCode.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>15DigitPkCode.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\15DigitPkCode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\15DigitPkCode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>15DigitPkCode.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AnotherDecimal.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BallHeight.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\C5PackageCode.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Control.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\FrameFlowType.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IntDecimal.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LeadBallPitch.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2DA.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2DAMandFillarea.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2DepopulatePin.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2LeadframeType.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2pkgsize.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2pkgthickness.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2PlatingType.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2SpecialMoldFeature.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\M2WB.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MoldThickness.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PackageHeight.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PackageSpecialCode.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PackageThicknessAfterMold.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PackageType.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PinBallCount.cs">
+      <DependentUpon>15DigitPkCode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrom.Designer.cs">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DefaultModel.cs" />
+    <Compile Include="Number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Number.Designer.cs">
+      <DependentUpon>Number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageHeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageHeight.Designer.cs">
+      <DependentUpon>PackageHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MainServices.cs" />
+    <EmbeddedResource Include="1stScreen.resx">
+      <DependentUpon>1stScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrom.resx">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Number.resx">
+      <DependentUpon>Number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageHeight.resx">
+      <DependentUpon>PackageHeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="DAL\15DigitPkCode.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>15DigitPkCode.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\15DigitPkCode.edmx.diagram">
+      <DependentUpon>15DigitPkCode.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CollectionPic\accept.png" />
+    <Content Include="CollectionPic\Apply.png" />
+    <Content Include="CollectionPic\Yes.png" />
+    <Content Include="DAL\15DigitPkCode.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>15DigitPkCode.edmx</DependentUpon>
+      <LastGenOutput>15DigitPkCode.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\15DigitPkCode.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>15DigitPkCode.edmx</DependentUpon>
+      <LastGenOutput>15DigitPkCode.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\Find.png" />
+    <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

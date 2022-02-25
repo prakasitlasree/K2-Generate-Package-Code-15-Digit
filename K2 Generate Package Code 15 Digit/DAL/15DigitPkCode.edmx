@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DigitPackageCodeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.5PackageCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="5PackageCode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullcode" Type="varchar" MaxLength="50" />
+          <Property Name="code1" Type="char" MaxLength="1" />
+          <Property Name="code2" Type="char" MaxLength="1" />
+          <Property Name="code3" Type="char" MaxLength="1" />
+          <Property Name="code4" Type="char" MaxLength="1" />
+          <Property Name="code5" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.AnotherDecimal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AnotherDecimal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="No" Type="char" MaxLength="2" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.BallHeight' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BallHeight">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="height" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.Control' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Control">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Control" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.FrameFlowType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FrameFlowType">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FrameFlow" Type="varchar" MaxLength="100" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.IntDecimal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="IntDecimal">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="No" Type="varchar" MaxLength="10" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.LeadBallPitch' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LeadBallPitch">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeadBall" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2DA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2DA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="da" Type="varchar" MaxLength="50" />
+          <Property Name="code" Type="char" MaxLength="2" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2DAMandFillarea' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2DAMandFillarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DaF" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2DepopulatePin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2DepopulatePin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dp" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="2" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2LeadframeType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2LeadframeType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2pkgsize' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2pkgsize">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="size" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2pkgthickness' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2pkgthickness">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="thickness" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2PlatingType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2PlatingType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2SpecialMoldFeature' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2SpecialMoldFeature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feature" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.M2WB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M2WB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WB" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.MoldThickness' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MoldThickness">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mold" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="Frame" Type="varchar" MaxLength="50" />
+          <Property Name="Substrate" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Other" Type="varchar" MaxLength="50" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.PackageHeight' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PackageHeight">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mold" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="Frame" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="Substrate" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.PackageSpecialCode' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PackageSpecialCode">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.PackageThicknessAfterMold' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PackageThicknessAfterMold">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Thickness" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.PackageType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PackageType">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Code" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pkgGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '15DigitPackageCode.dbo.PinBallCount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PinBallCount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PinBall" Type="varchar" MaxLength="50" />
+          <Property Name="Code1" Type="char" MaxLength="1" />
+          <Property Name="Code2" Type="char" MaxLength="1" />
+          <Property Name="Code3" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="DigitPackageCodeModelStoreContainer">
+          <EntitySet Name="5PackageCode" EntityType="Self.5PackageCode" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [5PackageCode].[id] AS [id], 
+    [5PackageCode].[fullcode] AS [fullcode], 
+    [5PackageCode].[code1] AS [code1], 
+    [5PackageCode].[code2] AS [code2], 
+    [5PackageCode].[code3] AS [code3], 
+    [5PackageCode].[code4] AS [code4], 
+    [5PackageCode].[code5] AS [code5]
+    FROM [dbo].[5PackageCode] AS [5PackageCode]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AnotherDecimal" EntityType="Self.AnotherDecimal" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AnotherDecimal].[id] AS [id], 
+    [AnotherDecimal].[No] AS [No], 
+    [AnotherDecimal].[Code] AS [Code]
+    FROM [dbo].[AnotherDecimal] AS [AnotherDecimal]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BallHeight" EntityType="Self.BallHeight" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BallHeight].[id] AS [id], 
+    [BallHeight].[height] AS [height], 
+    [BallHeight].[Code] AS [Code]
+    FROM [dbo].[BallHeight] AS [BallHeight]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Control" EntityType="Self.Control" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Control].[id] AS [id], 
+    [Control].[Control] AS [Control], 
+    [Control].[Code] AS [Code], 
+    [Control].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[Control] AS [Control]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FrameFlowType" EntityType="Self.FrameFlowType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FrameFlowType].[id] AS [id], 
+    [FrameFlowType].[FrameFlow] AS [FrameFlow], 
+    [FrameFlowType].[Code] AS [Code], 
+    [FrameFlowType].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[FrameFlowType] AS [FrameFlowType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IntDecimal" EntityType="Self.IntDecimal" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [IntDecimal].[id] AS [id], 
+    [IntDecimal].[No] AS [No], 
+    [IntDecimal].[Code] AS [Code]
+    FROM [dbo].[IntDecimal] AS [IntDecimal]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LeadBallPitch" EntityType="Self.LeadBallPitch" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LeadBallPitch].[id] AS [id], 
+    [LeadBallPitch].[LeadBall] AS [LeadBall], 
+    [LeadBallPitch].[Code] AS [Code], 
+    [LeadBallPitch].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[LeadBallPitch] AS [LeadBallPitch]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2DA" EntityType="Self.M2DA" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2DA].[id] AS [id], 
+    [M2DA].[da] AS [da], 
+    [M2DA].[code] AS [code], 
+    [M2DA].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2DA] AS [M2DA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2DAMandFillarea" EntityType="Self.M2DAMandFillarea" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2DAMandFillarea].[id] AS [id], 
+    [M2DAMandFillarea].[DaF] AS [DaF], 
+    [M2DAMandFillarea].[Code] AS [Code]
+    FROM [dbo].[M2DAMandFillarea] AS [M2DAMandFillarea]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2DepopulatePin" EntityType="Self.M2DepopulatePin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2DepopulatePin].[id] AS [id], 
+    [M2DepopulatePin].[Dp] AS [Dp], 
+    [M2DepopulatePin].[Code] AS [Code], 
+    [M2DepopulatePin].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2DepopulatePin] AS [M2DepopulatePin]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2LeadframeType" EntityType="Self.M2LeadframeType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2LeadframeType].[id] AS [id], 
+    [M2LeadframeType].[type] AS [type], 
+    [M2LeadframeType].[Code] AS [Code], 
+    [M2LeadframeType].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2LeadframeType] AS [M2LeadframeType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2pkgsize" EntityType="Self.M2pkgsize" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2pkgsize].[id] AS [id], 
+    [M2pkgsize].[size] AS [size], 
+    [M2pkgsize].[Code] AS [Code]
+    FROM [dbo].[M2pkgsize] AS [M2pkgsize]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2pkgthickness" EntityType="Self.M2pkgthickness" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2pkgthickness].[id] AS [id], 
+    [M2pkgthickness].[thickness] AS [thickness], 
+    [M2pkgthickness].[Code] AS [Code], 
+    [M2pkgthickness].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2pkgthickness] AS [M2pkgthickness]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2PlatingType" EntityType="Self.M2PlatingType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2PlatingType].[id] AS [id], 
+    [M2PlatingType].[type] AS [type], 
+    [M2PlatingType].[Code] AS [Code], 
+    [M2PlatingType].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2PlatingType] AS [M2PlatingType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2SpecialMoldFeature" EntityType="Self.M2SpecialMoldFeature" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2SpecialMoldFeature].[id] AS [id], 
+    [M2SpecialMoldFeature].[feature] AS [feature], 
+    [M2SpecialMoldFeature].[Code] AS [Code], 
+    [M2SpecialMoldFeature].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2SpecialMoldFeature] AS [M2SpecialMoldFeature]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M2WB" EntityType="Self.M2WB" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M2WB].[id] AS [id], 
+    [M2WB].[WB] AS [WB], 
+    [M2WB].[Code] AS [Code], 
+    [M2WB].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[M2WB] AS [M2WB]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MoldThickness" EntityType="Self.MoldThickness" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MoldThickness].[id] AS [id], 
+    [MoldThickness].[Mold] AS [Mold], 
+    [MoldThickness].[Frame] AS [Frame], 
+    [MoldThickness].[Substrate] AS [Substrate], 
+    [MoldThickness].[Code] AS [Code], 
+    [MoldThickness].[Other] AS [Other], 
+    [MoldThickness].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[MoldThickness] AS [MoldThickness]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PackageHeight" EntityType="Self.PackageHeight" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PackageHeight].[Id] AS [Id], 
+    [PackageHeight].[Mold] AS [Mold], 
+    [PackageHeight].[Frame] AS [Frame], 
+    [PackageHeight].[Substrate] AS [Substrate], 
+    [PackageHeight].[Code] AS [Code]
+    FROM [dbo].[PackageHeight] AS [PackageHeight]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PackageSpecialCode" EntityType="Self.PackageSpecialCode" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PackageSpecialCode].[id] AS [id], 
+    [PackageSpecialCode].[Data] AS [Data], 
+    [PackageSpecialCode].[Code] AS [Code], 
+    [PackageSpecialCode].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[PackageSpecialCode] AS [PackageSpecialCode]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PackageThicknessAfterMold" EntityType="Self.PackageThicknessAfterMold" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PackageThicknessAfterMold].[id] AS [id], 
+    [PackageThicknessAfterMold].[Thickness] AS [Thickness], 
+    [PackageThicknessAfterMold].[Code] AS [Code], 
+    [PackageThicknessAfterMold].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[PackageThicknessAfterMold] AS [PackageThicknessAfterMold]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PackageType" EntityType="Self.PackageType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PackageType].[id] AS [id], 
+    [PackageType].[Type] AS [Type], 
+    [PackageType].[Code] AS [Code], 
+    [PackageType].[pkgGroup] AS [pkgGroup]
+    FROM [dbo].[PackageType] AS [PackageType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PinBallCount" EntityType="Self.PinBallCount" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PinBallCount].[id] AS [id], 
+    [PinBallCount].[PinBall] AS [PinBall], 
+    [PinBallCount].[Code1] AS [Code1], 
+    [PinBallCount].[Code2] AS [Code2], 
+    [PinBallCount].[Code3] AS [Code3]
+    FROM [dbo].[PinBallCount] AS [PinBallCount]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DigitPackageCodeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C5PackageCode" EntityType="DigitPackageCodeModel.C5PackageCode" />
+          <EntitySet Name="AnotherDecimals" EntityType="DigitPackageCodeModel.AnotherDecimal" />
+          <EntitySet Name="BallHeights" EntityType="DigitPackageCodeModel.BallHeight" />
+          <EntitySet Name="Controls" EntityType="DigitPackageCodeModel.Control" />
+          <EntitySet Name="FrameFlowTypes" EntityType="DigitPackageCodeModel.FrameFlowType" />
+          <EntitySet Name="IntDecimals" EntityType="DigitPackageCodeModel.IntDecimal" />
+          <EntitySet Name="LeadBallPitches" EntityType="DigitPackageCodeModel.LeadBallPitch" />
+          <EntitySet Name="M2DA" EntityType="DigitPackageCodeModel.M2DA" />
+          <EntitySet Name="M2DAMandFillarea" EntityType="DigitPackageCodeModel.M2DAMandFillarea" />
+          <EntitySet Name="M2DepopulatePin" EntityType="DigitPackageCodeModel.M2DepopulatePin" />
+          <EntitySet Name="M2LeadframeType" EntityType="DigitPackageCodeModel.M2LeadframeType" />
+          <EntitySet Name="M2pkgsize" EntityType="DigitPackageCodeModel.M2pkgsize" />
+          <EntitySet Name="M2pkgthickness" EntityType="DigitPackageCodeModel.M2pkgthickness" />
+          <EntitySet Name="M2PlatingType" EntityType="DigitPackageCodeModel.M2PlatingType" />
+          <EntitySet Name="M2SpecialMoldFeature" EntityType="DigitPackageCodeModel.M2SpecialMoldFeature" />
+          <EntitySet Name="M2WB" EntityType="DigitPackageCodeModel.M2WB" />
+          <EntitySet Name="MoldThicknesses" EntityType="DigitPackageCodeModel.MoldThickness" />
+          <EntitySet Name="PackageHeights" EntityType="DigitPackageCodeModel.PackageHeight" />
+          <EntitySet Name="PackageSpecialCodes" EntityType="DigitPackageCodeModel.PackageSpecialCode" />
+          <EntitySet Name="PackageThicknessAfterMolds" EntityType="DigitPackageCodeModel.PackageThicknessAfterMold" />
+          <EntitySet Name="PackageTypes" EntityType="DigitPackageCodeModel.PackageType" />
+          <EntitySet Name="PinBallCounts" EntityType="DigitPackageCodeModel.PinBallCount" />
+        </EntityContainer>
+        <EntityType Name="C5PackageCode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="code1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="code2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="code3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="code4" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="code5" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AnotherDecimal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BallHeight">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Control">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Control1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FrameFlowType">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FrameFlow" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="IntDecimal">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LeadBallPitch">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeadBall" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2DA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="da" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2DAMandFillarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DaF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2DepopulatePin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2LeadframeType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2pkgsize">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2pkgthickness">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="thickness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2PlatingType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2SpecialMoldFeature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M2WB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MoldThickness">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mold" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="Frame" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Substrate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Other" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PackageHeight">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mold" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="Frame" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="Substrate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PackageSpecialCode">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PackageThicknessAfterMold">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Thickness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PackageType">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pkgGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PinBallCount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PinBall" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Code1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Code2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Code3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DigitPackageCodeModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="C5PackageCode">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.C5PackageCode">
+              <MappingFragment StoreEntitySet="5PackageCode">
+                <ScalarProperty Name="code5" ColumnName="code5" />
+                <ScalarProperty Name="code4" ColumnName="code4" />
+                <ScalarProperty Name="code3" ColumnName="code3" />
+                <ScalarProperty Name="code2" ColumnName="code2" />
+                <ScalarProperty Name="code1" ColumnName="code1" />
+                <ScalarProperty Name="fullcode" ColumnName="fullcode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnotherDecimals">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.AnotherDecimal">
+              <MappingFragment StoreEntitySet="AnotherDecimal">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BallHeights">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.BallHeight">
+              <MappingFragment StoreEntitySet="BallHeight">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Controls">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.Control">
+              <MappingFragment StoreEntitySet="Control">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Control1" ColumnName="Control" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrameFlowTypes">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.FrameFlowType">
+              <MappingFragment StoreEntitySet="FrameFlowType">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="FrameFlow" ColumnName="FrameFlow" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntDecimals">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.IntDecimal">
+              <MappingFragment StoreEntitySet="IntDecimal">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeadBallPitches">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.LeadBallPitch">
+              <MappingFragment StoreEntitySet="LeadBallPitch">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="LeadBall" ColumnName="LeadBall" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2DA">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2DA">
+              <MappingFragment StoreEntitySet="M2DA">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="da" ColumnName="da" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2DAMandFillarea">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2DAMandFillarea">
+              <MappingFragment StoreEntitySet="M2DAMandFillarea">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="DaF" ColumnName="DaF" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2DepopulatePin">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2DepopulatePin">
+              <MappingFragment StoreEntitySet="M2DepopulatePin">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Dp" ColumnName="Dp" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2LeadframeType">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2LeadframeType">
+              <MappingFragment StoreEntitySet="M2LeadframeType">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2pkgsize">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2pkgsize">
+              <MappingFragment StoreEntitySet="M2pkgsize">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2pkgthickness">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2pkgthickness">
+              <MappingFragment StoreEntitySet="M2pkgthickness">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="thickness" ColumnName="thickness" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2PlatingType">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2PlatingType">
+              <MappingFragment StoreEntitySet="M2PlatingType">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2SpecialMoldFeature">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2SpecialMoldFeature">
+              <MappingFragment StoreEntitySet="M2SpecialMoldFeature">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="feature" ColumnName="feature" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M2WB">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.M2WB">
+              <MappingFragment StoreEntitySet="M2WB">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="WB" ColumnName="WB" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MoldThicknesses">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.MoldThickness">
+              <MappingFragment StoreEntitySet="MoldThickness">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Substrate" ColumnName="Substrate" />
+                <ScalarProperty Name="Frame" ColumnName="Frame" />
+                <ScalarProperty Name="Mold" ColumnName="Mold" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackageHeights">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.PackageHeight">
+              <MappingFragment StoreEntitySet="PackageHeight">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Substrate" ColumnName="Substrate" />
+                <ScalarProperty Name="Frame" ColumnName="Frame" />
+                <ScalarProperty Name="Mold" ColumnName="Mold" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackageSpecialCodes">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.PackageSpecialCode">
+              <MappingFragment StoreEntitySet="PackageSpecialCode">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackageThicknessAfterMolds">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.PackageThicknessAfterMold">
+              <MappingFragment StoreEntitySet="PackageThicknessAfterMold">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackageTypes">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.PackageType">
+              <MappingFragment StoreEntitySet="PackageType">
+                <ScalarProperty Name="pkgGroup" ColumnName="pkgGroup" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PinBallCounts">
+            <EntityTypeMapping TypeName="DigitPackageCodeModel.PinBallCount">
+              <MappingFragment StoreEntitySet="PinBallCount">
+                <ScalarProperty Name="Code3" ColumnName="Code3" />
+                <ScalarProperty Name="Code2" ColumnName="Code2" />
+                <ScalarProperty Name="Code1" ColumnName="Code1" />
+                <ScalarProperty Name="PinBall" ColumnName="PinBall" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
